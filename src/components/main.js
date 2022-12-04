@@ -10,8 +10,9 @@ const Main=()=>{
                     <h2>Find Your Book</h2>
                     <div className="search">
                         <input type="text" placeholder="Enter Your Book Name"/>
+                        <button><i class="fa-solid fa-icons"></i></button>
                     </div>
-               
+                    <img src="./images/ba1.png" alt="Book and flowers on the table"/>
                 </div>
             </div>
         </>
