@@ -6,7 +6,7 @@ const Card=()=>{}
             <img src="./images/book.png" alt=""  />
             <div className="bottom">
                  <h3 className="title"> React JS</h3>
-                 <p className="amont">&#8377;3290</p>
+                 <p className="amont">&#8377;3290ss</p>
             </div>
             </div>
         </>
