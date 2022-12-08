@@ -6,8 +6,10 @@ const Main=()=>{
         const searchBook=(evt)=>{
             if(evt.key==="Enter")
         {
-                console.log("hello");
-        }
+                axios.get('https://www.googleapis.com/books/v1/users/1112223334445556677/bookshelves/3?key=AIzaSyBLB4hN2NRfhYbGFSlSHLlQJ6rbnXV5Opk');
+                .then(res=>console.log(res))
+                .catch(err=>console/log)
+            }
     }
     return(
         <>
