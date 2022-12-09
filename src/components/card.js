@@ -5,15 +5,18 @@ const Card=({book})=>{
         <>
             {   
                  book.map((item) => {
-                     let thumbnail=item.volumeInfo.imageLinks.&&item.volumInfo.imageLinks.smallThumbnail;
-                     return (
-                         <>
-                         <div className="card">
-            <img src="{thumbnail}" alt=""  />
-            <div className="bottom">
-                 <h3 className="title"> React JS</h3>
-                 <p className="amont">&#8377;3290ss</p>
-            </div>
+                     let thumbnail=item.volumeInfo.imageLinks &&item.volumInfo.imageLinks.smallThumbnail;
+                     let amount=item.saleInfo.listPrice && item.saleInfo.listPrice.amount;
+                     if(thumbnail!= undefined && amount !=undefined)
+                     {
+                        return (
+                            <>
+                            <div className="card">                      
+                            <img src="{thumbnail}" alt=""  />
+                            <div className="bottom">
+                                <h3 className="title"> {item.volumeInfo.title}</h3>
+                                <p className="amont">&#8377;{"amount"}</p>
+              </div>
             </div>
         </>
     )
