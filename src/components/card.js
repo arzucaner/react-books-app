@@ -1,7 +1,8 @@
 import react from "react";
-const Card=({book})=>{
-    console.log(book)
-    return(
+const [show,setShow]=useState(false);
+const [bookItem,setItem]=useState();
+console.log(book)
+return (
         <>
             {   
                  book.map((item) => {
@@ -11,13 +12,14 @@ const Card=({book})=>{
                      {
                         return (
                             <>
-                            <div className="card">                      
+                            <div className="card" onClick={()=>{setShow(true);setItem(utem)}}>                      
                             <img src="{thumbnail}" alt=""  />
                             <div className="bottom">
                                 <h3 className="title"> {item.volumeInfo.title}</h3>
                                 <p className="amont">&#8377;{"amount"}</p>
               </div>
             </div>
+              <Modal show={show} item={bookItem} onClose={}=>setShow(false)}/>
         </>
     )
 }
