@@ -27,7 +27,7 @@ const Main=()=>{
                         onKeyPress={searchBook}/>
                         <button><i class="fa-solid fa-icons"></i></button>
                     </div>
-                    <img src="./images/ba1.png" alt="Book and flowers on the table"/>
+                    <img src="./images/bookapp.png" alt="ink flowing fountain pen"/>
                 </div>
             </div>
 
