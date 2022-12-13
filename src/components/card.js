@@ -1,7 +1,8 @@
 import react from "react";
 const [show,setShow]=useState(false);
 const [bookItem,setItem]=useState();
-console.log(book)
+const Card = ({books}) => { 
+console.log (book)
 return (
         <>
             {   
@@ -21,6 +22,6 @@ return (
             </div>
               <Modal show={show} item={bookItem} onClose={}=>setShow(false)}/>
         </>
-    )
+    ))
 }
 export default Card;
