@@ -1,4 +1,5 @@
 import react, {useState}from "react";
+import Card from "./Card";
 import axios from "axios";
 const Main=()=>{
     const Main=()=>{}
@@ -8,12 +9,12 @@ const Main=()=>{
             if(evt.key==="Enter")
         {
                 axios.get('https://www.googleapis.com/books/v1/users/1112223334445556677/bookshelves/3?q='+search+'&key=AIzaSyBLB4hN2NRfhYbGFSlSHLlQJ6rbnXV5Opk'+'maxResults=40')
-                .then(res=>setData(res.data.items))
-                .catch(err=>console/log)
+.then(res=>setData(res.data.items))
+.catch(err=>console/log)
 
-            }
-    }
-    return(
+        }
+}
+return(
         <>
            <div className="header">
                 <div className="row1">

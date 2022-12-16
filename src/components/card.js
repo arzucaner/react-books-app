@@ -7,7 +7,7 @@ return (
         <>
             {   
                  book.map((item) => {
-                     let thumbnail=item.volumeInfo.imageLinks &&item.volumInfo.imageLinks.smallThumbnail;
+                     let thumbnail=item.volumeInfo.imageLinks && item.volumInfo.imageLinks.smallThumbnail;
                      let amount=item.saleInfo.listPrice && item.saleInfo.listPrice.amount;
                      if(thumbnail!= undefined && amount !=undefined)
                      {
