@@ -20,8 +20,8 @@ return (
                                 <p className="amont">&#8377;{"amount"}</p>
               </div>
             </div>
-              <Modal show={show} item={bookItem} onClose={}=>setShow(false)}/>
+              <Modal show={show} item={bookItem} onClose={}=>setShow(false)/>
         </>
-    ))
+    )
 }
 export default Card;
