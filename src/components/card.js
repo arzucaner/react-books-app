@@ -22,7 +22,7 @@ console.log (book)
               <Modal show={show} item={bookItem} onClose={}=>setShow(false)/>
         </>
     )
-}
-}
+   }
+  })
 }
 export default Card;
