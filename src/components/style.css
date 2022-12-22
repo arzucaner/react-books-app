@@ -133,7 +133,7 @@ video {
 }
 
 book {
-    background: url('book.svg') bootom center no repeat;
+    background: url('book.svg') bottom center no-repeat;
     background-size: 60%;
     position: absolute;
     top: 100%;
@@ -141,3 +141,46 @@ book {
     height: 100%;
     transition: all 0.4s;
 }
+
+nav {
+    background : black;
+    top:0;
+    width: 100%;
+    transition:all 0.5s;
+    position: relative;
+    z-index: 1;
+}
+  
+  .fixed-nav {
+    padding-top: 64px;
+}
+  
+  .fixed-nav nav {
+      position: fixed;
+      box-shadow: white;
+}
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display:flex;
+}
+  
+  nav li {
+    flex:1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+  li.logo {
+    max-width:0;
+    overflow: hidden;
+    background: white;
+    transition: all 0.5s;
+    font-weight: 600;
+    font-size: 50px;
+}
+  

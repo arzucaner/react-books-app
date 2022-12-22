@@ -14,6 +14,7 @@ const Main=()=>{
 
         }
 }
+console.log(bookData);
 return(
         <>
            <div className="header">
