@@ -183,4 +183,11 @@ nav {
     font-weight: 600;
     font-size: 50px;
 }
+
+.logo {
+   display: block;  
+   width:10px;
+   height:5px;
+}
+
   
