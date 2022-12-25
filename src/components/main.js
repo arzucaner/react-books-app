@@ -26,8 +26,8 @@ return(
                     <div className="search">
                         <input type="text" placeholder="Enter Your Book Name"/>
                         value={search} onChange={e=>setSearch(e.target.value)}
-                        onKeyPress={searchBook}/>
-                        <button><i class="fa-solid fa-icons"></i></button>
+                        onKeyPress={searchBook}
+                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
                     </div>
                     <img src="./images/image1.jpg" alt="library"/>
                 </div>
