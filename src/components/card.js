@@ -12,17 +12,17 @@ console.log (book)
                  {
                     return (
                         <>
-                        <div className="card" onClick={()=>{setShow(true);setItem(utem)}}>                      
-                            <img src="{thumbnail}" alt=""  />
-                            <div className="bottom">
-                                <h3 className="title">{item.volumeInfo.title}</h3>
-                                <p className="amont">&#8377;{amount}</p>
-              </div>
-            </div>
-              <Modal show={show} item={bookItem} onClose={}=>setShow(false)/>
-        </>
-    )
-   }
-  })
-}
-export default Card;
+                        <div className="card" onClick={()=>{setShow(true);setItem(item)}}>                    
+                        <img src="{thumbnail}" alt=""/>
+                        <div className="bottom">
+                        <h3 className="title">{item.volumeInfo.title}</h3>
+                        <p className="amount">&#7377;{amount}</p>
+                        </div>
+                        </div>
+                        <Modal show={show} item={bookItem} onClose={()=}/>
+                        </>
+                    )
+                 }
+                })
+              }
+

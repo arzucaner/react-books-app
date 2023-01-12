@@ -41,7 +41,7 @@ html{
 }
 
 .images {
-background: url('./images/image1.jpg');
+background: url("../../public/images/image1.jpg");
     clip-path: circle(60% at left 300px);
     z-index: -1;
 }
