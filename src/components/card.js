@@ -1,28 +1,39 @@
-import react from "react";
-const [show,setShow]=useState(false);
-const [bookItem,setItem]=useState();
-const Card = ({book}) => { 
-console.log (book)
-  
-         
-                 book.map((item) => {                       
-                 let thumbnail=item.volumeInfo.imageLinks && item.volumInfo.imageLinks.smallThumbnail;
-                 let amount=item.saleInfo.listPrice && item.saleInfo.listPrice.amount;
-                 if(thumbnail!= undefined && amount !=undefined)
-                 {
-                    return (
-                        <>
-                        <div className="card" onClick={()=>{setShow(true);setItem(item)}}>                    
-                        <img src="{thumbnail}" alt=""/>
-                        <div className="bottom">
-                        <h3 className="title">{item.volumeInfo.title}</h3>
-                        <p className="amount">&#7377;{amount}</p>
-                        </div>
-                        </div>
-                        <Modal show={show} item={bookItem} onClose={()=}/>
-                        </>
-                    )
-                 }
-                })
-              }
+import React, { useState } from "react";
+import Modal from "./Modal";
 
+const Card = ({ book }) => {
+  const [show, setShow] = useState(false);
+  const [bookItem, setItem] = useState();
+
+  return (
+    <>
+      {book.map((item) => {
+        const thumbnail =
+          item.volumeInfo.imageLinks &&
+          item.volumeInfo.imageLinks.smallThumbnail;
+        const amount =
+          item.saleInfo.listPrice && item.saleInfo.listPrice.amount;
+        const currency =
+          item.saleInfo.listPrice && item.saleInfo.listPrice.currencyCode;
+        const formattedAmount =
+          amount && new Intl.NumberFormat("en-GB", { style: "currency", currency }).format(amount);
+        if (thumbnail && amount) {
+          return (
+            <div className="card" key={item.id} onClick={() => { setShow(true); setItem(item) }}>
+              <img src={thumbnail} alt="" />
+              <div className="bottom">
+                <h3 className="title">{item.volumeInfo.title}</h3>
+                <p className="amount">{formattedAmount}</p>
+              </div>
+            </div>
+          );
+        } else {
+          return null;
+        }
+      })}
+      <Modal show={show} item={bookItem} onClose={() => setShow(false)} />
+    </>
+  );
+};
+
+export default Card;
