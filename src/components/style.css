@@ -28,7 +28,7 @@ html{
     position: relative;
 }
 
-.header ::before{
+.header::before{
     content: "";
     position: absolute;
     top:0;
@@ -41,7 +41,7 @@ html{
 }
 
 .images {
-background: url("../../public/images/image1.jpg");
+background: url(`../../public/images/image1.jpg`);
     clip-path: circle(60% at left 300px);
     z-index: -1;
 }
