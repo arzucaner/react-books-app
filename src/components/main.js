@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Card from "./Card";
 import axios from "axios";
 
@@ -10,9 +10,7 @@ const Main = () => {
     if (evt.key === "Enter") {
       axios
         .get(
-          "https://www.googleapis.com/books/v1/users/1112223334445556677/bookshelves/3?q=" +
-           search +
-           "&key=YOUR_API_KEY&maxResults=40"
+          `https://www.googleapis.com/books/v1/users/1112223334445556677/bookshelves/3?q=${search}&key=YOUR_API_KEY&maxResults=40`
         )
         .then((res) => {
           setBookData(res.data.items);
