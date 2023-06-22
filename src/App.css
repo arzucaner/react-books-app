@@ -79,3 +79,17 @@
   color: white;
   padding: 20px;
 }
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slide-in-text {
+  animation: slide-in 1s ease-in-out;
+}
