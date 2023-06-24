@@ -4,15 +4,31 @@ import Modal from "./Modal";
 const Card = ({ book }) => {
   const [showModal, setShowModal] = useState(false);
   const [selectedBook, setSelectedBook] = useState(null);
+  const [filter, setFilter] = useState("");
 
   const handleCardClick = (book) => {
     setShowModal(true);
     setSelectedBook(book);
   };
 
+  const handleFilterChange = (event) => {
+    setFilter(event.target.value);
+  };
+
+  const filteredBooks = book.filter((item) =>
+    item.volumeInfo.title.toLowerCase().includes(filter.toLowerCase())
+  );
+
   return (
     <>
-      {book.map((item) => {
+      <input
+        type="text"
+        value={filter}
+        onChange={handleFilterChange}
+        placeholder="Filter books"
+      />
+
+      {filteredBooks.map((item) => {
         const thumbnail = item.volumeInfo.imageLinks?.smallThumbnail;
         const amount = item.saleInfo.listPrice?.amount;
         const currency = item.saleInfo.listPrice?.currencyCode;
