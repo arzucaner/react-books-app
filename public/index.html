@@ -6,34 +6,22 @@
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
-  <meta name="description" content="React Book App offers you the best reading experience with a vast collection of books. Discover, purchase, and read the latest and popular books."/>
+  <meta name="description"
+    content="React Book App offers you the best reading experience with a vast collection of books. Discover, purchase, and read the latest and popular books." />
   <title>React Book App - Online Bookstore</title>
   <script src="https://kit.fontawesome.com/34e1bc8d6f.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="%PUBLIC_URL%/style.css" />
 </head>
 
 <body>
-    <div id="root"></div>
-
-  <nav id="main">
-    <ul>
-      <li className="logo">
-        <a href="#">Book</a>
-      </li>
-      <li>
-        <a href="#">About</a>
-      </li>
-      <li>
-        <a href="#">Bestsellers</a>
-      </li>
-      <li>
-        <a href="#">Trending</a>
-      </li>
-      <li>
-        <a href="#">Gifts</a>
-      </li>
-    </ul>
-  </nav>
+  <div id="root"></div>
+  <div class="menu">
+    <div class="menu-item"><a href="#" class="menu-link">Book</a></div>
+    <div class="menu-item"><a href="#" class="menu-link">About</a></div>
+    <div class="menu-item"><a href="#" class="menu-link">Bestsellers</a></div>
+    <div class="menu-item"><a href="#" class="menu-link">Trending</a></div>
+    <div class="menu-item"><a href="#" class="menu-link">Gifts</a></div>
+  </div>
 
   <div className="wrapper">
     <video className="flex" width="700" height="400" src="video.mp4" loop controls></video>
@@ -51,5 +39,4 @@
     </div>
   </div>
 </body>
-
 </html>

@@ -4,29 +4,6 @@ body {
     padding: 0;
 }
 
-#main {
-    background-color: #f2f2f2;
-    padding: 10px;
-}
-
-#main ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style-type: none;
-    padding: 0;
-}
-
-#main ul li {
-    margin-right: 10px;
-}
-
-#main ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
 .wrapper {
     display: flex;
     justify-content: center;
@@ -48,4 +25,37 @@ video {
     background-color: #333;
     color: #fff;
     padding: 5px;
+}
+
+.menu {
+    margin: 0;
+    width: 100%;
+    padding: 5px;
+    min-height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    border-bottom: 2px solid black;
+    flex-wrap: wrap;
+}
+
+.menu-link {
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-family: 'Unbounded', sans-serif;
+    color: white;
+    background: black;
+    transition: background-color 0.3s ease;
+    padding: 10px 20px;
+    border-radius: 10px;
+    opacity: 0.5;
+}
+
+.menu-item {
+    height: 2em;
+    align-self: center;
+    margin: 5px;
 }
